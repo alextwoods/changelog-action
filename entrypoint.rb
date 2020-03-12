@@ -12,7 +12,8 @@ puts "GIT: #{`which git`}"
 
 Dir.chdir '/github/workspace'
 puts "Attempting to Build"
-load('Rakefile')
+puts load('Rakefile')
+puts "Loading Rakefile.  Tryign to invoke...."
 Rake::Task['build'].invoke
 changes = `git status --porcelain`
 puts "\n\n-------------------------"
