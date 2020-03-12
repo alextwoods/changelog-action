@@ -1,5 +1,7 @@
 #!/usr/local/bin/ruby
 
+require 'rake'
+
 puts "Hello #{ARGV[0]}"
 puts ENV.inspect
 puts "-----------------------\n\n"
