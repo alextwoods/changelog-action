@@ -1,6 +1,9 @@
 # Container image that runs your code
 FROM ruby
 
+COPY Gemfile ./
+RUN bundle install
+
 # Copies your code file from your action repository to the filesystem path `/` of the container
 COPY entrypoint.rb /entrypoint.rb
 
